@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import "./Form.scss";
 
 class Form extends Component {
@@ -17,7 +18,7 @@ class Form extends Component {
     e.preventDefault();
     console.log(this.state.value);
   };
-  
+
   render() {
     return (
       <>
@@ -37,5 +38,9 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  callback: PropTypes.func
+};
 
 export default Form;

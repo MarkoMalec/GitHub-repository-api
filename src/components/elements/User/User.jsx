@@ -1,11 +1,12 @@
 import React from "react";
+import propTypes from 'prop-types';
 import { FaLink } from 'react-icons/fa';
 import "./User.scss";
 
-const User = ({ isUserLoaded, name, avatar, location, bio, repos }) => {
+const User = ({ userFound, name, avatar, location, bio, repos }) => {
   return (
     <>
-      {isUserLoaded ? (
+      {userFound ? (
         <div className="user-info">
           <div className="user-header">
             <div className="user-avatar">
@@ -34,9 +35,18 @@ const User = ({ isUserLoaded, name, avatar, location, bio, repos }) => {
             <h1>This user has no repositories.</h1>
           )}
         </div>
-      ) : null}
+      ) : <p>No user found.</p>}
     </>
   );
 };
+
+User.propTypes = {
+    userFound: propTypes.object,
+    name: propTypes.string,
+    avatar: propTypes.string,
+    location: propTypes.string,
+    bio: propTypes.string,
+    repos: propTypes.array
+}
 
 export default User;
