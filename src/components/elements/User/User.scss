@@ -1,0 +1,85 @@
+$blue-100: #12ADC1;
+$blue-200: #0295A9;
+$yellow: #FDD037;
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto;
+    padding: 20px;
+
+    h4 {
+        color: $yellow;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+    }
+
+    .user-header {
+        display: flex;
+        justify-content: flex-start;
+        min-width: 360px;
+        gap: 3rem;
+        align-items: center;
+
+        .user-avatar {
+            overflow: hidden;
+            border-radius: 50px 50px 50px 0;
+
+            img {
+                max-width: 300px;
+                border-radius: 50px 50px 50px 0;
+                min-width: 100px;
+                transition: .2s ease-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    filter: saturate(1.5);
+                }
+            }
+        }
+
+        h1 {
+            color: white;
+            font-size: 8rem;
+            font-weight: 600;
+
+            @media (max-width: 1000px) {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 800px) {
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .user-details {
+        p {
+            color: white;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .user-repos {
+        padding: 1rem;
+        color: white;
+        border: 1px solid $yellow;
+        border-radius: 0 20px 20px 20px;
+
+        .user-repo-box {
+            padding: .5rem 1.5rem;
+            border-bottom: 2px solid $blue-100;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+
+}

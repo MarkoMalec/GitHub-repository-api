@@ -1,0 +1,60 @@
+$blue-100: #12ADC1;
+$blue-200: #0295A9;
+$yellow: #FDD037;
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: $blue-100;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem .8rem;
+    border: 1px solid $yellow;
+    border-radius: 15px;
+
+    label {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        @media (max-width: 600px) {
+            font-size: 1rem;
+        }
+    }
+
+    input {
+        display: block;
+        width: 80%;
+        color: white;
+        background-color: transparent;
+        padding: .8rem .5rem;
+        border-top: none;
+        border-bottom: 2px solid $yellow;
+        border-left: none;
+        border-right: none;
+        font-size: 1.2rem;
+        outline: none;
+
+        @media (max-width: 600px) {
+            font-size: 1rem;
+        }
+    }
+
+    #submit {
+        width: 50%;
+        padding: .5rem 1rem;
+        color: white;
+        background-color: $blue-100;
+        border: 2px solid $yellow;
+        border-radius: 10px;
+        transition: .2s linear;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $blue-200;
+        }
+    }
+}
