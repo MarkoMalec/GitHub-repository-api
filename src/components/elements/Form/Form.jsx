@@ -9,7 +9,7 @@ class Form extends Component {
 
   handleInput = (e) => {
     this.setState({
-      value: e.target.value,
+      value: e.target.value.trim()
     });
   };
 

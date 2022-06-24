@@ -6,7 +6,7 @@ import "./User.scss";
 const User = ({ userFound, name, avatar, location, bio, repos }) => {
   return (
     <>
-      {userFound ? (
+      {userFound === true ? (
         <div className="user-info">
           <div className="user-header">
             <div className="user-avatar">
@@ -35,13 +35,13 @@ const User = ({ userFound, name, avatar, location, bio, repos }) => {
             <h1>This user has no repositories.</h1>
           )}
         </div>
-      ) : <p>No user found.</p>}
+      ) : <h1>No user found.</h1>}
     </>
   );
 };
 
 User.propTypes = {
-    userFound: propTypes.object,
+    userFound: propTypes.bool,
     name: propTypes.string,
     avatar: propTypes.string,
     location: propTypes.string,

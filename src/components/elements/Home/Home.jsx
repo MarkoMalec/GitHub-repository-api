@@ -51,7 +51,7 @@ const Home = () => {
       {loading ? <LoadingCircle /> :
       <div className="user-container">
         <User
-          userFound={user}
+          userFound={user.message === 'Not Found' ? false : true}
           name={user?.name}
           avatar={user?.avatar_url}
           location={user?.location}
