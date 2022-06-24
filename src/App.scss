@@ -9,6 +9,10 @@ $yellow: #fdd037;
   margin: 0;
 }
 
+::selection {
+  background-color: $yellow;
+}
+
 body {
   background-color: $blue-200;
 }

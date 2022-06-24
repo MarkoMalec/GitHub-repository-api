@@ -1,3 +1,8 @@
+$blue-100: #12ADC1;
+$blue-200: #0295A9;
+$yellow: #FDD037;
+
+
 .main {
     margin-top: 5rem;
 
@@ -7,9 +12,29 @@
     }
 
     .user-container {
+        display: flex;
+        flex-direction: column;
         width: 90%;
         max-width: 1200px;
         min-width: 350px;
-        margin: 0 auto;
+        margin: 0 auto 5rem auto;
+
+        button {
+            align-self: center;
+            padding: .5rem 1rem;
+            width: 50%;
+            font-size: 1.5rem;
+            color: white;
+            background-color: $blue-100;
+            border: 1px solid $yellow;
+            border-radius: 10px;
+            transition: .2s ease-out;
+
+            &:hover {
+                background-color: $blue-200;
+                cursor: pointer;
+            }
+
+        }
     }
 }

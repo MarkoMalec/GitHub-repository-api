@@ -58,6 +58,8 @@ const Home = () => {
           bio={user?.bio}
           repos={repos}
         />
+        // s obzirom na jednostavnost aplikacije, mislim da ce window loc reload biti sasvim zadovoljavajuc nacin :D
+        <button onClick={() => window.location.reload()}>Clear</button>
       </div>}
     </section>
   );
