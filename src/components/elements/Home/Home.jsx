@@ -6,7 +6,7 @@ import User from "../User/User";
 import "./Home.scss";
 
 const Home = () => {
-  const [repos, setRepos] = useState(null);
+  const [repos, setRepos] = useState([]);
   const [user, setUser] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const Home = () => {
       .then((result) => {
         setRepos(result);
         setLoading(false);
-        console.log(result);
+        // console.log(result);
       }).catch((err) => console.log(err));
   };
 
@@ -51,7 +51,7 @@ const Home = () => {
       {loading ? <LoadingCircle /> :
       <div className="user-container">
         <User
-          userFound={user.message === 'Not Found' ? false : true}
+          userFound={user?.message === 'Not Found' ? false : true}
           name={user?.name}
           avatar={user?.avatar_url}
           location={user?.location}

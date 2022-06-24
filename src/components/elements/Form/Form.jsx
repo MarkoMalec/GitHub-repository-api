@@ -9,14 +9,14 @@ class Form extends Component {
 
   handleInput = (e) => {
     this.setState({
-      value: e.target.value.trim()
+      value: e.target.value.replace(/[^a-zA-Z0-9]/g, '')
     });
   };
 
   doSearch = (e) => {
     this.props.callback(this.state.value);
     e.preventDefault();
-    console.log(this.state.value);
+    // console.log(this.state.value);
   };
 
   render() {

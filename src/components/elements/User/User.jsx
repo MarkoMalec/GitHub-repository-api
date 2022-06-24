@@ -27,7 +27,7 @@ const User = ({ userFound, name, avatar, location, bio, repos }) => {
                 {repos?.map((el) => {
                 return <div className="user-repo-box" key={el.id}>
                         <FaLink /> <a href={el.html_url} target="_blank" rel="noopener noreferrer">{el.name}</a>
-                       </div>;
+                       </div>
                 })}
               </div>
             </>
