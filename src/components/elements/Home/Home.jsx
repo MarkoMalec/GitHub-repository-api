@@ -18,7 +18,7 @@ const Home = () => {
         setLoading(false);
         setUser(result);
         console.log(result);
-      });
+      }).catch((err) => console.log(err));
   };
 
   const searchUser = (searchTerm) => {
@@ -40,7 +40,7 @@ const Home = () => {
         setRepos(result);
         setLoading(false);
         console.log(result);
-      });
+      }).catch((err) => console.log(err));
   };
 
   return (
